@@ -1,4 +1,4 @@
-baseURL = 'https://github.com/SingingFoot/scrivener'
+baseURL = ''
 languageCode = 'en-us'
 title = 'Scrivener'
 theme = "ace-documentation"
