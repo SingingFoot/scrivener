@@ -1,0 +1,176 @@
+<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><link rel=canonical href=/techdoc/api/api_in_the_table/><title>| Scrivener</title><link href=/css/fontawesome.min.css rel=stylesheet><link rel=stylesheet href=/css/ace.min.css></head><body><nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top" id=navbarMain><div class=container><div><a class=navbar-brand href=/>Scrivener</a></div><button class="navbar-toggler navbar-toggler-right collapsed" type=button data-toggle=collapse data-target=#navbarMainCollapse aria-controls=navbarMainCollapse aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse" id=navbarMainCollapse><ul class="navbar-nav ml-auto"><li class=nav-item><a class=nav-link href=https://github.com/SingingFoot>My GitHub <i class='fab fa-github'></i></a></li></ul></div></div></nav><div class=container-fluid><div class=row><div class="docs-sidenav order-0 col-12 col-md-3 col-lg-2 col-xl-2 position-sticky border-right"><nav class="navbar navbar-expand-md navbar-light pl-0"><button class="navbar-toggler navbar-toggler-right collapsed" type=button data-toggle=collapse data-target=#sidenav-left-collapse aria-controls=sidenav-left-collapse aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse align-items-start flex-column" id=sidenav-left-collapse><form class="form-inline my-2 my-lg-0 searchbox"><input class="form-control mr-sm-2 w-100" data-search-input id=search-by type=text placeholder=Search></form><ul class="navbar-nav flex-column pt-3"><li data-nav-id=/techdoc/ class="nav-item my-1 parent haschildren"><a class="nav-link p-0" href=/techdoc/><h6>TechDoc</h6></a><ul class="list-unstyled ml-2"><li data-nav-id=/techdoc/api/ class="nav-item my-1 parent haschildren"><a class="nav-link p-0" href=/techdoc/api/><h6>API</h6></a><ul class="list-unstyled ml-2"><li data-nav-id=/techdoc/api/4waysapi/ class="nav-item my-1"><a href=/techdoc/api/4waysapi/ class="nav-link p-0">Four ways to make an API call in JS</a></li><li data-nav-id=/techdoc/api/createinvite/ class="nav-item my-1"><a href=/techdoc/api/createinvite/ class="nav-link p-0">Create an invite to sign for a merged document group</a></li><li data-nav-id=/techdoc/api/api_in_the_table/ class="nav-item my-1 active"><a href=/techdoc/api/api_in_the_table/ class="nav-link p-0"></a></li></ul></li><li data-nav-id=/techdoc/javascript/ class="nav-item my-1"><a class="nav-link p-0" href=/techdoc/javascript/><h6>JavaScript</h6></a></li></ul></li></ul></div></nav></div><div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class=docs-toc><nav id=TableOfContents><ul><li><a href=#create-some-boiler-plates>Create some boiler plates</a></li><li><a href=#find-a-free-api-online>Find a free API online</a></li><li><a href=#add-html-tags>Add HTML tags</a></li><li><a href=#add-js-code-to-fetch-data-from-api>Add JS code to fetch data from API</a></li><li><a href=#add-the-api-data-to-the-table>Add the API data to the table</a></li><li><a href=#style-the-images>Style the images</a></li><li><a href=#handle-errors-with-catch-method>Handle errors with &ldquo;catch&rdquo; method</a></li></ul></nav></div></div><div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3"><h1></h1><h1 id=how-to-place-api-in-a-table>How to place API in a table</h1><h2 id=create-some-boiler-plates>Create some boiler plates</h2><p>To present API data in a table online create three files in a folder:</p><pre><code>index.html
+script.js
+style.css
+</code></pre><p>Then add bootstrap code to index.html to get the table fast. Open the <a href=https://getbootstrap.com/>Bootstrap</a> service, click on the &ldquo;Read the Docs&rdquo; button and find CDN links paragraph on the page.</p><pre tabindex=0><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;en&#34;&gt;
+&lt;head&gt;
+    &lt;meta charset=&#34;UTF-8&#34;&gt;
+    &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt;
+    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+    &lt;title&gt;API data in table&lt;/title&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&#34;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id=find-a-free-api-online>Find a free API online</h2><p>Open the <a href=https://fakestoreapi.com/docs>FakeStoreApi</a> service. FakeStoreApi is a free online REST API that you can use whenever you need Pseudo-real data for your e-commerce or shopping website without running any server-side code. It&rsquo;s awesome for teaching purposes, sample codes, tests, etc.</p><p>You can find all the API data by clicking the <a href=https://fakestoreapi.com/products>Products</a> link.</p><h2 id=add-html-tags>Add HTML tags</h2><p>Add the title to your website with H1 tag. Find the <a href=https://getbootstrap.com/docs/5.2/content/tables/#overview>Tables</a> paragraph in the Bootstrap website and copy the code into your index.html file under the H1 tag. Place the table code inside the &ldquo;container&rdquo; div.
+You also can add class=&ldquo;table-primary&rdquo; to the first table&rsquo;s row (inside <code>&lt;tr></code> tag) to make in light blue. To add borders to the table add class=&ldquo;table table-bordered&rdquo; to the <code>&lt;table></code> tag.
+Change titles into the table&rsquo;s header according to the API (Title, Description, Price and Image).</p><pre tabindex=0><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;en&#34;&gt;
+&lt;head&gt;
+    &lt;meta charset=&#34;UTF-8&#34;&gt;
+    &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt;
+    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+    &lt;title&gt;API data in table&lt;/title&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&#34;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 class=&#34;text-center&#34;&gt;Storing API data in table&lt;/h1&gt;
+    &lt;div class=&#34;container&#34;&gt;
+        &lt;table class=&#34;table table-bordered&#34;&gt;
+            &lt;thead&gt;
+              &lt;tr class=&#34;table-primary&#34;&gt;
+                &lt;th scope=&#34;col&#34;&gt;#&lt;/th&gt;
+                &lt;th scope=&#34;col&#34;&gt;First&lt;/th&gt;
+                &lt;th scope=&#34;col&#34;&gt;Last&lt;/th&gt;
+                &lt;th scope=&#34;col&#34;&gt;Handle&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+              &lt;tr&gt;
+                &lt;th scope=&#34;row&#34;&gt;1&lt;/th&gt;
+                &lt;td&gt;Mark&lt;/td&gt;
+                &lt;td&gt;Otto&lt;/td&gt;
+                &lt;td&gt;@mdo&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                &lt;td&gt;2&lt;/td&gt;
+                &lt;td&gt;Jacob&lt;/td&gt;
+                &lt;td&gt;Thornton&lt;/td&gt;
+                &lt;td&gt;@fat&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                &lt;th scope=&#34;row&#34;&gt;3&lt;/th&gt;
+                &lt;td colspan=&#34;2&#34;&gt;Larry the Bird&lt;/td&gt;
+                &lt;td&gt;@twitter&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>Change the first cell in the first row from &ldquo;1&rdquo; to &ldquo;name&rdquo; and delete second and third rows. Add id to &ldquo;tbody&rdquo; tag: <code>&lt;tbody id="table_body"></code>.</p><pre tabindex=0><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;en&#34;&gt;
+&lt;head&gt;
+    &lt;meta charset=&#34;UTF-8&#34;&gt;
+    &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34;&gt;
+    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+    &lt;title&gt;API data in table&lt;/title&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&#34;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 class=&#34;text-center&#34;&gt;Storing API data in table&lt;/h1&gt;
+    &lt;div class=&#34;container&#34;&gt;
+        &lt;table class=&#34;table table-bordered&#34;&gt;
+            &lt;thead&gt;
+              &lt;tr class=&#34;table-primary&#34;&gt;
+                &lt;th scope=&#34;col&#34;&gt;Title&lt;/th&gt;
+                &lt;th scope=&#34;col&#34;&gt;Description&lt;/th&gt;
+                &lt;th scope=&#34;col&#34;&gt;Price&lt;/th&gt;
+                &lt;th scope=&#34;col&#34;&gt;Image&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody id=&#34;table_body&#34;&gt;
+              &lt;tr&gt;
+                &lt;td&gt;name&lt;/td&gt;
+                &lt;td&gt;Mark&lt;/td&gt;
+                &lt;td&gt;Otto&lt;/td&gt;
+                &lt;td&gt;@mdo&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id=add-js-code-to-fetch-data-from-api>Add JS code to fetch data from API</h2><p>Add <code>&lt;script src="script.js">&lt;/script></code> code before the <code>&lt;/body></code> closing tag. Use promises with &ldquo;fetch&rdquo; function. Add the <a href=https://fakestoreapi.com/products>Products</a> API link as a parameter.</p><pre tabindex=0><code>fetch(&#34;https://fakestoreapi.com/products&#34;).then((data)=&gt;{
+    // console.log(data); the data is in json format
+    return data.json(); // the data is converted to an object
+}).then((objectData)=&gt;{
+    //console.log(objectData); the data is presented as an object in your browser console
+})
+</code></pre><h2 id=add-the-api-data-to-the-table>Add the API data to the table</h2><p>If you add the index &ldquo;0&rdquo; to the &ldquo;objectData&rdquo; parameter, only the first element of the object will be presented in the browser console.</p><pre tabindex=0><code>fetch(&#34;https://fakestoreapi.com/products&#34;).then((data)=&gt;{
+    // console.log(data); the data is in json format
+    return data.json(); // the data is converted to an object
+}).then((objectData)=&gt;{
+    //console.log(objectData[0]); the data is presented as an object in your browser console, [0] index shows only the first element in the console 
+})
+</code></pre><p>Create empty &ldquo;tableData&rdquo; variable and use &ldquo;map&rdquo; method for &ldquo;objectData&rdquo; to present all the data from API.</p><pre tabindex=0><code>fetch(&#34;https://fakestoreapi.com/products&#34;).then((data)=&gt;{
+    // console.log(data); the data is in json format
+    return data.json(); // the data is converted to an object
+}).then((objectData)=&gt;{
+    console.log(objectData[0].title); //the data is presented as an object in your browser console
+    let tableData=&#34;&#34;;
+    objectData.map((values)=&gt;{
+        tableData=`&lt;h1&gt;${values.title}&lt;/h1&gt;`;
+    })
+})
+</code></pre><p>Add the id to &ldquo;tbody&rdquo; tag <code>&lt;tbody id="table_body"></code> and use it in the &ldquo;getElementById&rdquo; method with &ldquo;innerHTML&rdquo; method.</p><pre tabindex=0><code>fetch(&#34;https://fakestoreapi.com/products&#34;).then((data)=&gt;{
+    // console.log(data); the data is in json format
+    return data.json(); // the data is converted to an object
+}).then((objectData)=&gt;{
+    console.log(objectData[0].title); //the data is presented as an object in your browser console
+    let tableData=&#34;&#34;;
+    objectData.map((values)=&gt;{
+        tableData=`&lt;h1&gt;${values.title}&lt;/h1&gt;`;
+    });
+    document.getElementById(&#34;table_body&#34;).innerHTML=tableData;
+})
+</code></pre><p>But you can have only the last title (with &ldquo;id&rdquo;:20) from the API in such a way. Add the &ldquo;+&rdquo; sign before the &ldquo;=&rdquo; sign in the line below to get all the data from the API.</p><pre tabindex=0><code>tableData+=`&lt;h1&gt;${values.title}&lt;/h1&gt;`;
+</code></pre><p>Then change the <code>&lt;h1></code> tag with the entire table row from the index.html file in the &ldquo;tableData&rdquo; variable.</p><pre tabindex=0><code>tableData+=`&lt;tr&gt;
+        &lt;td&gt;name&lt;/td&gt;
+        &lt;td&gt;Mark&lt;/td&gt;
+        &lt;td&gt;Otto&lt;/td&gt;
+        &lt;td&gt;@mdo&lt;/td&gt;
+      &lt;/tr&gt;`;
+</code></pre><p>After that you need to replace the hardcoded values (name, Mark, Otto and @mdo) with the API values in the &ldquo;tableData&rdquo; variable. Pay attention that all the images must be placed into the <code>&lt;img src></code> tag.</p><pre tabindex=0><code>tableData+=`&lt;tr&gt;
+        &lt;td&gt;${values.title}&lt;/td&gt;
+        &lt;td&gt;${values.description}&lt;/td&gt;
+        &lt;td&gt;${values.price}&lt;/td&gt;
+        &lt;td&gt;&lt;img src=&#34;${values.image}&#34;/&gt;&lt;/td&gt;
+      &lt;/tr&gt;`;  
+</code></pre><h2 id=style-the-images>Style the images</h2><p>You can see that all the images are fetched in their original size, so they are too large. You can limit the images sizes in the style.css file. Link that file in your index.html file like this.</p><pre tabindex=0><code>&lt;link rel=&#34;stylesheet&#34; href=&#34;style.css&#34;&gt;
+</code></pre><p>Then add the image size rule to the &ldquo;style.css&rdquo; file.</p><pre tabindex=0><code>img{
+    width: 100px;
+}
+</code></pre><h2 id=handle-errors-with-catch-method>Handle errors with &ldquo;catch&rdquo; method</h2><p>There could be errors, if API is unavailable.</p><pre tabindex=0><code>fetch(&#34;https://fakestoreapi.com/products&#34;).then((data)=&gt;{
+    // console.log(data); the data is in json format
+    return data.json(); // the data is converted to an object
+}).then((objectData)=&gt;{
+    //console.log(objectData[0].title); //the data is presented as an object in your browser console
+    let tableData=&#34;&#34;;
+    objectData.map((values)=&gt;{
+        tableData+=`&lt;tr&gt;
+        &lt;td&gt;${values.title}&lt;/td&gt;
+        &lt;td&gt;${values.description}&lt;/td&gt;
+        &lt;td&gt;${values.price}&lt;/td&gt;
+        &lt;td&gt;&lt;img src=&#34;${values.image}&#34;/&gt;&lt;/td&gt;
+      &lt;/tr&gt;`; 
+    });
+    document.getElementById(&#34;table_body&#34;).innerHTML=tableData;
+}).catch((err)=&gt;{
+    console.log(err);
+})
+</code></pre><div class=row><div class="position-relative mx-auto col-lg-9"><div class="bg-primary overflow-hidden p-3 mt-5 shadow"><h4 class="text-white text-center">Read more</h4><div class="d-flex justify-content-center"><a class="p-1 mr-3 d-inline-block text-white" href=/techdoc/api/createinvite/ title="Create an invite to sign for a merged document group"><i class="fas fa-chevron-left p-1"></i>Create an invite to sign for a merged document group</a>
+<a class="p-1 ml-3 d-inline-block text-white text-right" href=/techdoc/javascript/ title=JavaScript>JavaScript<i class="fas fa-chevron-right p-1"></i></a></div></div></div></div></div></div></div><script src=/lib/jquery.min.js></script>
+<script src=/lib/popper.min.js></script>
+<script src=/js/bootstrap.min.js></script>
+<script type=text/javascript src=/plugins/lunr.min.js></script>
+<script type=text/javascript src=/plugins/auto-complete.js></script>
+<link href=/plugins/auto-complete.css rel=stylesheet><script type=text/javascript>var baseurl="/"</script><script type=text/javascript src=/plugins/search.js></script>
+<script type=text/javascript src=/plugins/clipboard.js></script>
+<script>new ClipboardJS(".btn")</script></body></html>
