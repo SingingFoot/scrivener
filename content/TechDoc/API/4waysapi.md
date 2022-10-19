@@ -4,14 +4,12 @@ description = "This is an area for technical documentation"
 weight = 1
 +++
 
-# Four ways to make an API call in JavaScript
+There are many ways to make an API call in different programming languages. In JavaScript an API could be called in four ways: 
 
-There are many ways to make an API call in different programming languages. In JavaScript an API could be called in four ways:
-
-    XMLHttpRequest
-    Fetch API
-    Axios
-    JQuery
+- XMLHttpRequest
+- Fetch API
+- Axios
+- JQuery
 
 Use JSON [Placeholder](https://jsonplaceholder.typicode.com/users) service to get API data. It has an endpoint with 10 users data.
 
@@ -67,10 +65,9 @@ All modern browsers have a built-in XMLHttpRequest object to request data from a
 1. As a constant const `responseAPI` to get all the data in the table.
 2. In the browser console `console.log(responseAPI)`
 
-<details>
-  <summary>XMLHttpRequest gets API data in such a way</summary>
+{{< collapse title="XMLHttpRequest gets API data in such a way" >}} 
+{{< code lang="html" >}} 
 
-```
 const request = new XMLHttpRequest();
 request.open("GET", "https://jsonplaceholder.typicode.com/users");
 request.send();//to get API data in Network => Preview browser tab
@@ -94,8 +91,8 @@ request.onload = ()=>{
         console.log(`error ${request.status}`) // to handle errors
     }
 }
-```
-</details>
+{{< /code >}} 
+{{< /collapse >}} 
 
 ## Fetch API
 
@@ -103,10 +100,9 @@ The Fetch API provides an interface for fetching resources (including across the
 The `fetch()` method takes one mandatory argument, the path to the resource you want to fetch. It returns a Promise that resolves to the Response to that request — as soon as the server responds with headers — even if the server response is an HTTP error status. 
 The API data received from the server is stored into `json` object and can be placed in a constant
 
-<details>
-  <summary>In the example below API data placed in responseAPI constant and presented in a table</summary>
+{{< collapse title="In the example below API data placed in responseAPI constant and presented in a table" >}} 
+{{< code lang="html" >}} 
 
-```
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(response=>{
         return response.json();
@@ -125,16 +121,15 @@ fetch('https://jsonplaceholder.typicode.com/users')
     });
     document.getElementById("table_body").innerHTML=tableData;
     })
-```
+{{< /code >}} 
+{{< /collapse >}} 
 
-</details>
+<br><br>
 
 There is also a second approach with fetch API using async function
 
-<details>
-  <summary>There is also a second approach with fetch API using async function</summary>
-
-```
+{{< collapse title="fetch API using async function" >}} 
+{{< code lang="html" >}} 
 async function getUsers(){
     let response = await fetch('https://jsonplaceholder.typicode.com/users');
     let data = await response.json();
@@ -156,8 +151,8 @@ getUsers().then(response=>{
 });
 document.getElementById("table_body").innerHTML=tableData;
 })
-```
-</details>
+{{< /code >}} 
+{{< /collapse >}} 
 
 ## Axios
 
@@ -165,12 +160,13 @@ Axios is a promise-based HTTP Client for node.js and the browser. It is isomorph
 
 To use the client visit its [Axios website](https://axios-http.com/docs/intro) to find the corresponding CDN. Copy and paste that CDN to your index.html file
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+{{< code lang="html" >}}    
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+{{< /code >}}
 
-<details>
-  <summary>Use Axios like this to present API data in a table</summary>
+{{< collapse title="Use Axios like this to present API data in a table" >}} 
+{{< code lang="html" >}} 
 
-```
 axios.get('https://jsonplaceholder.typicode.com/users')
      .then(response=>{
         console.log(response.data);
@@ -189,8 +185,9 @@ document.getElementById("table_body").innerHTML=tableData;
      }, err=>{
         console.log(err);
      })
-```
-</details>
+{{< /code >}} 
+{{< /collapse >}} 
+
 
 ## JQuery
 
@@ -198,12 +195,13 @@ jQuery is a fast, small, and feature-rich JavaScript library. It makes things li
 
 To use the jQuery visit the [CDNJS Library](https://cdnjs.com/libraries/jquery) to find the corresponding CDN. Copy and paste that CDN to your index.html file
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+{{< code lang="html">}} 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+{{< /code >}} 
 
-<details>
-  <summary>Use jQuery like this to present API data in a table</summary>
+{{< collapse title="Use jQuery like this to present API data in a table" >}} 
+{{< code lang="html" >}} 
 
-```
 $(document).ready(function(){
     $.ajax({
         url:'https://jsonplaceholder.typicode.com/users',
@@ -229,7 +227,8 @@ $(document).ready(function(){
 
     })
 })
-```
-</details>
+{{< /code >}} 
+{{< /collapse >}} 
+
 
 

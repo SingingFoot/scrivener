@@ -30,7 +30,7 @@ Default: `Bearer {{token}}`
 
 ### Body
 
-![Body structure](/api/str.png "Body structure")
+![Body structure](/img/api/str.png "Body structure")
 
 
 ### Request example
