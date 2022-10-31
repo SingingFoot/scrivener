@@ -27,9 +27,9 @@ Regardless of the parameter type, define the following with each parameter:
 
 The method defines the operation with the resource. Briefly, each method is as follows:
 
-{{< button style="primary" link="" >}} GET {{< /button >}} Retrieves a resource
-{{< button style="primary" link="" >}} POST {{< /button >}} Creates a resource
-{{< button style="primary" link="" >}} PUT {{< /button >}} Updates or creates within an existing resource
-{{< button style="primary" link="" >}} PATCH {{< /button >}} Partially modifies an existing resource
-{{< button style="primary" link="" >}} DELETE {{< /button >}} Removes the resource
+{{< button style="green" >}} GET {{< /button >}} Retrieves a resource
+{{< button style="blue" >}} POST {{< /button >}} Creates a resource
+{{< button style="violet" >}} PUT {{< /button >}} Updates or creates within an existing resource
+{{< button style="orange" >}} PATCH {{< /button >}} Partially modifies an existing resource
+{{< button style="red" >}} DELETE {{< /button >}} Removes the resource
 
