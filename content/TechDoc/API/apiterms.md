@@ -1,9 +1,8 @@
----
-sidebar_position: 4
-displayed_sidebar: techdoc
----
-
-# API terms
++++
+title = "API terms"
+description = "This is an area for technical documentation"
+weight = 4
++++
 
 Resource URL: https://api.openweathermap.org/surfreport/{beachId}
 
@@ -27,9 +26,13 @@ Regardless of the parameter type, define the following with each parameter:
 
 The method defines the operation with the resource. Briefly, each method is as follows:
 
-{{< button style="green" >}} GET {{< /button >}} Retrieves a resource
-{{< button style="blue" >}} POST {{< /button >}} Creates a resource
-{{< button style="violet" >}} PUT {{< /button >}} Updates or creates within an existing resource
-{{< button style="orange" >}} PATCH {{< /button >}} Partially modifies an existing resource
-{{< button style="red" >}} DELETE {{< /button >}} Removes the resource
+{{< button style="success" >}} GET {{< /button >}} Retrieves a resource
+
+{{< button style="info" >}} POST {{< /button >}} Creates a resource
+
+{{< button style="secondary" >}} PUT {{< /button >}} Updates or creates within an existing resource
+
+{{< button style="primary" >}} PATCH {{< /button >}} Partially modifies an existing resource
+
+{{< button style="danger" >}} DELETE {{< /button >}} Removes the resource
 

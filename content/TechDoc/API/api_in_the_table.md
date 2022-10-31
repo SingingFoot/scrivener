@@ -1,10 +1,8 @@
----
-sidebar_position: 2
-displayed_sidebar: techdoc
----
-
-# How to place API in a table
-
++++
+title = "How to place API in a table"
+description = "This is an area for technical documentation"
+weight = 3
++++
 
 ## Create some boiler plates
 

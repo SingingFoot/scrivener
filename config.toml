@@ -1,7 +1,7 @@
 baseURL = '/'
 languageCode = 'en-us'
 title = 'Scrivener'
-theme = "ace-documentation"
+theme = 'ace-documentation'
 [[menu.shortcuts]]
 name = "My GitHub <i class='fab fa-github'></i>"
 url = "https://github.com/SingingFoot"

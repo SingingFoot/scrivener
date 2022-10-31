@@ -12,3 +12,5 @@ In contrast to a user interface, which connects a computer to a person, an appli
 One purpose of APIs is to hide the internal details of how a system works, exposing only those parts a programmer will find useful and keeping them consistent even if the internal details later change. An API may be custom-built for a particular pair of systems, or it may be a shared standard allowing interoperability among many systems.
 
 The term API is often used to refer to web APIs, which allow communication between computers that are joined by the internet. There are also APIs for programming languages, software libraries, computer operating systems, and computer hardware. APIs originated in the 1940s, though the term did not emerge until the 1960s and 1970s. Recent developments in APIs have led to the rise in popularity of microservices, which are loosely coupled services accessed through public APIs.
+
+hugo --gc --minify
