@@ -6,3 +6,5 @@ theme = "ace-documentation"
 name = "My GitHub <i class='fab fa-github'></i>"
 url = "https://github.com/SingingFoot"
 weight = 10
+[params]
+favicon = "img/favicon.ico" 
