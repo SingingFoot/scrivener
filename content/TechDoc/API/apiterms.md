@@ -27,9 +27,13 @@ Regardless of the parameter type, define the following with each parameter:
 These data types are the most common with REST APIs:
 
 **string**: An alphanumeric sequence of letters and/or numbers
+
 **integer**: A whole number — can be positive or negative
+
 **boolean**: True or false value
+
 **object**: Key-value pairs in JSON format
+
 **array**: A list of values
 
 In addition to specifying the data type, the parameters should indicate the maximum, minimum, and allowed values if appropriate.
