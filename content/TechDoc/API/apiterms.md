@@ -6,15 +6,29 @@ weight = 4
 
 ## Resource URL
 
-`https://api.openweathermap.org/surfreport/{beachId}`
+{{< code lang="html" >}} 
+
+https://api.openweathermap.org/surfreport/{beachId}
+
+{{< /code >}} 
 
 ## Endpoint 
 
-`/surfreport/{beachId}`
+{{< code lang="html" >}} 
+
+/surfreport/{beachId}`
+
+{{< /code >}} 
 
 ## Path parameter
 
-Path parameter should be represented in curly braces): `{beachId}`
+Path parameter should be represented in curly braces: 
+
+{{< code lang="html" >}} 
+
+{beachId}
+
+{{< /code >}} 
 
 ## Parameters
 
@@ -60,10 +74,10 @@ The method defines the operation with the resource. Briefly, each method is as f
 
 Request bodies are closely similar to parameters but are not technically a parameter. In OpenAPI v2.0, request bodies were classified as a type of parameter, but in v3.0, they are not considered a parameter but rather a path property.
 
-```
+{{< code lang="html" >}} 
 {
 "days": 2,
 "units": "imperial",
 "time": 1433524597
 }
-```
+{{< /code >}} 
