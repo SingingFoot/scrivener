@@ -4,11 +4,11 @@ description = "This is an area for technical documentation"
 weight = 4
 +++
 
-Resource URL: https://api.openweathermap.org/surfreport/{beachId}
+Resource URL: `https://api.openweathermap.org/surfreport/{beachId}`
 
-Endpoint: /surfreport/{beachId}
+Endpoint: `/surfreport/{beachId}`
 
-Path parameter (it should be represented in curly braces): {beachId}
+Path parameter (it should be represented in curly braces): `{beachId}`
 
 Parameters are options you can pass with the endpoint (such as specifying the response format or the amount returned) to influence the response. 
 There are several types of parameters: 
