@@ -42,3 +42,14 @@ Methods **call** and **apply** are very similar to **bind** in the sense of the 
 person1.logInfo.call(person2);
 person1.logInfo.apply(person2);
 ```
+
+Panyi Szabolcs
+1113 Budapest
+Bocskai út 43. VI. lph 3. em/132
+Phone: 36304652636
+For Svitlana Shynkarenko
+
+Username: singingfoot@gmail.com
+Your new Password: M1IFH18Z
+www.escadaviragkuldes.hu
+
