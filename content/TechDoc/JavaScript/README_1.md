@@ -1,3 +1,8 @@
++++
+title = "Terraform Docs"
+description = "This is an area for technical documentation"
+weight = 4
++++
 <!-- BEGIN_TF_DOCS -->
 
 
